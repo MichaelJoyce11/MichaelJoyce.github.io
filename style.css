@@ -47,7 +47,7 @@ nav ul li a::after{
     background: #2EC6DB;
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -7px;
     transition: .8s;
 }
 
@@ -56,7 +56,7 @@ nav ul li a:hover::after{
 }
 
 .logo{
-    width: 140px;
+    width: 180px;
 }
 
 .header-Text{
@@ -71,4 +71,15 @@ nav ul li a:hover::after{
 
 .header-Text h1 span{
     color: #2EC6DB;
+}
+
+/*------------about--------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
