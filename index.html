@@ -15,13 +15,15 @@
         <div class="container">
             <nav>
                 <img src="Portfolio/nameLogo.png" alt="My Name as a Logo: Michael" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sideMenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Portfolio</a></li>
+                    <li><a href="#portfolio">Services</a></li>
+                    <li><a href="#contactForm">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="header-Text">
                 <p>Web Developer/Software Developer<br></p>
@@ -48,6 +50,7 @@
                         <p class="tab-links active-link" onclick=" opentab_about('skills')">Skills</p>                        
                         <p class="tab-links " onclick=" opentab_about('experience')">Experience</p>
                         <p class="tab-links " onclick=" opentab_about('education')">Education</p>
+                        <p class="tab-links " onclick=" opentab_about('Languages')">Languages</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -70,6 +73,13 @@
                             <li><span>2022-Present</span><br>University of Windsor - IT Certificate UWindsor</li>
                         </ul>
                     </div>
+                    <div class="tab-contents" id="Languages">
+                        <ul>
+                            <li><span>Procedural </span><br>C</li>
+                            <li><span>Object Oriented</span><br>Java, Python</li>
+                            <li><span>Logical/Web Development</span><br>SQL, HTML, Javascript, CSS</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,7 +95,7 @@
                     <p>
 
                     </p>
-                    <a href="#">learn more</a>
+                    <a href="#contactForm">learn more</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-app-store"></i>
@@ -93,7 +103,7 @@
                     <p>
 
                     </p>
-                    <a href="#">learn more</a>
+                    <a href="#contactForm">learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-user-secret"></i>
@@ -101,7 +111,7 @@
                     <p>
 
                     </p>
-                    <a href="#">learn more</a>
+                    <a href="#contactForm">learn more</a>
                 </div>
             </div>
         </div>
@@ -113,15 +123,102 @@
             <div class="work-list">
                 <div class="work">
                     <img src="Portfolio/PostAPic.png" alt="PostAPic">
+                    <div class="layer">
+                        <h3>Post A Pic</h3>
+                        <p>PostAPic is a website that can allow you to upload pictures do a database
+                            with a user account anonymously though, and you can search for other pictures based
+                            on their tag.
+                        </p>
+                        <a href="https://github.com/JoshuaPicchioni/PostAPic"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
                 <div class="work">
-                    
+                    <img src="Portfolio/PythonPractice.png" alt="Python Practice">
+                    <div class="layer">
+                        <h3>Python Practice</h3>
+                        <p>
+                           This Repository is just to showcase some of my python skills.
+                        </p>
+                        <a href="https://github.com/MichaelJoyce11/PythonPractice"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                
+                    </div>
                 </div>
                 <div class="work">
-                    
+                    <img src="Portfolio/SchoolAssignment.png" alt="Website Redesign">
+                    <div class="layer">
+                        <h3>Yale Art School Website</h3>
+                        <p>
+                            This website was made for a school project, keeping all of the accessible links, 
+                            just adding more flow and structure and easy readability for the users. (Just a landing page redesign)
+                        </p>
+                        <a href="https://github.com/MichaelJoyce11/SchoolAssignment"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/MichaelJoyce11" class="btn">See more</a>
+        </div>
+    </div>
+    <!-------Contact Form---------->
+    <div id="contactForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <h1 class="sub-title">
+                        Contact Me
+                    </h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>mjoyce2526@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>(1)+227-787-9496</p>
+                    <div class="socialMedia">
+                        <a href="https://www.linkedin.com/in/michael-joyce-linked-in/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/MichaelJoyce11"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100026213414058"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/joyce11__/"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <a href="Portfolio/Resume.pdf" download="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="col-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="confirmation"></span>
                 </div>
             </div>
         </div>
+        <div class="MadeBy">
+            <p>Made by Michael Joyce <i class="fa-solid fa-face-smile-wink"></i> Michael Joyce Portfolio</p>
+        </div>
     </div>
+    <script>
+
+        var sideBar = document.getElementById("sideMenu");
+
+        function openMenu(){
+            sideMenu.style.right = "0";
+        }
+
+        function closeMenu(){
+            sideMenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwE7yvLLbA7SjsWfYXNwiOLvQ5cu7VPqlfspcgv1g2WOfX1WfhCEN1wSP-QS26-L1WMug/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const confirmation = document.getElementById("confirmation")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {confirmation.innerHTML = "Message Sent Successfully" 
+            setTimeout(function(){
+                confirmation.innerHTML = ""},3500)
+                form.reset()})
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
 </body>
 </html>
